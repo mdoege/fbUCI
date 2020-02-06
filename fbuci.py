@@ -126,12 +126,15 @@ while b.result() == "*":
                         if move.strip() == "":
                                 draw_board(b)
                                 draw_labels()
+                                continue
                         if move.strip() == "r":
                                 rotate = not rotate
                                 draw_board(b)
                                 draw_labels()
+                                continue
                         if move.strip() == "s" and result:
                                 print("Score:", result.info.get("score", "unknown"))
+                                continue
                         if move.strip() in ("q", "quit", "exit", "resign"):
                                 print("Goodbye!")
                                 f.close()
