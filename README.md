@@ -10,7 +10,7 @@ Needs [python-chess](https://github.com/niklasf/python-chess) and [Pillow](https
 
 Framebuffer screen size is set to 1920x1080, so on Raspbian be sure to disable overscan in ``/boot/config.txt``.
 
-You may need to add yourself to the ``video`` group on some Linux distros for permission to use the framebuffer.
+On some Linux distros other than Raspbian you may need to add yourself to the ``video`` group for permission to use the framebuffer.
 
 ## Usage
 

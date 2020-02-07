@@ -160,13 +160,19 @@ while b.result() == "*":
                         print("... %-6s" % b.san(mm), flush = True)
         b2 = b.copy()
         b.push(mm)
-        newmove = []
+        newmove = (mm.from_square, mm.to_square)
+
+        # remove old highlights
+        for i in oldmove:
+                draw_square(b, i)
+
+        # draw current move
         for i in range(64):
-                if i in oldmove:
-                        draw_square(b, i)
                 if b.piece_at(i) != b2.piece_at(i):
-                        draw_square(b, i, highlight = True)
-                        newmove.append(i)
+                        if i in newmove:
+                                draw_square(b, i, highlight = True)
+                        else:
+                                draw_square(b, i)
         oldmove = newmove
 
 print
