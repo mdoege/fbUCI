@@ -1,6 +1,6 @@
 # fbUCI, an UCI chess frontend for the Linux framebuffer
 
-![screenshot](https://github.com/mdoege/fbUCI/raw/master/fbuci.png "fbUCI screenshot")
+![screenshot](fbuci.png "fbUCI screenshot")
 
 The default engine is ``/usr/bin/stockfish``, but other UCI engine binaries can also be used.
 
